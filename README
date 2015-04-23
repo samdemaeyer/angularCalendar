@@ -1,0 +1,10 @@
+# JS Test
+
+I would like you to assemble a grid of homework items similar to our school calendar on [https://bett.showmyhomework.co.uk/school/homeworks/calendar]()
+
+1. Each homework item would display the fields "title", "class", "teacher" and "subject". 
+2. Each item appears in the correct day. 
+3. Each item is coloured-coded per subject. 
+4. Items are stacked from top to bottom on each day arbitrarily. 
+5. Each item is draggable; once it is dragged to a different day, its "day" value should change. 
+6. When clicked, an item will appear in an overlay, that will allow the user to edit the title, class and day; when the day is changed, the item should appear in the correct day column
