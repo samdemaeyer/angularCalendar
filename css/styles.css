@@ -1,0 +1,103 @@
+.days {
+    float: left;
+    border: 1px solid;
+    margin: 5px;
+    width: 250px;
+    height: auto;
+    min-height: 400px;
+}
+.fl-right{
+	float: right;
+}
+.fl-left{
+	float: left;
+}
+/*.item {
+    width: 150px;
+    height: auto;
+    border: 1px solid;
+    padding: 5px;
+    margin: 10px;
+}*/
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+[ng-drag] {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+[ng-drag] {
+    width: 200px;
+    height: auto;
+    background: rgba(255, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    display: block;
+    cursor: move;
+}
+[ng-drag].english {
+    background: rgba(255, 0, 0, 0.5);
+}
+[ng-drag].maths {
+    background: rgba(0, 255, 0, 0.5);
+}
+[ng-drag].geography {
+    background: rgba(0, 0, 255, 0.5);
+}
+[ng-drag].spanish{
+	background: aliceblue;
+}
+[ng-drag].french{
+	background: green;
+}
+[ng-drag].history{
+	background: yellow;
+}
+[ng-drag].physics{
+	background: seashell;
+}
+[ng-drag].chemistry{
+	background: tomato;
+}
+[ng-drag].drag-over {
+    border: solid 1px red;
+}
+[ng-drag].dragging {
+    opacity: 0.5;
+}
+[ng-drop] {
+    background: rgba(0, 0, 0, 0.25);
+    text-align: center;
+    display: block;
+    position: relative;
+    padding: 20px;
+    width: 250px;
+    height: 100vh;
+    float: left;
+}
+[ng-drop].drag-enter {
+    border: solid 5px red;
+}
+[ng-drop] span.title {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 20px;
+    margin-left: -100px;
+    margin-top: -10px;
+}
+[ng-drop] div {
+    position: relative;
+    z-index: 2;
+}
+.draglist {
+    display: inline-block;
+    margin: 0 auto;
+}
