@@ -1,4 +1,12 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic);
+$red: red;
+$green: green;
+$Aqua : Aqua ;
+$yellow: yellow;
+$orange: orange;
+$tomato: tomato;
+$navy: navy;
+$gold: gold;
 * {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -47,14 +55,24 @@ body{
 				    border-radius: 6px;
 				    margin: 10px auto;
 				    padding: 10px;
-				    &.english{border-color: red}
-					&.maths{border-color: green}
-					&.geography{border-color: pink}
-					&.spanish{border-color: yellow}
-					&.french{border-color: orange}
-					&.history{border-color: tomato}
-					&.physics{border-color: navy}
-					&.chemistry{border-color: gold}
+				    background: #FFF;
+				    &.english{border-color: $red;}
+					&.maths{border-color: $green;}
+					&.geography{border-color: $Aqua ;}
+					&.spanish{border-color: $yellow;}
+					&.french{border-color: $orange;}
+					&.history{border-color: $tomato;}
+					&.physics{border-color: $navy;}
+					&.chemistry{border-color: $gold;}
+					// &.dragging{background-color: rgba(0, 236, 255, 0.7)}
+				    &.english.dragging{background: lighten($red, 15%);}
+					&.maths.dragging{background: lighten($green, 15%);}
+					&.geography.dragging{background: lighten($Aqua , 15%);}
+					&.spanish.dragging{background: lighten($yellow, 15%);}
+					&.french.dragging{background: lighten($orange, 15%);}
+					&.history.dragging{background: lighten($tomato, 15%);}
+					&.physics.dragging{background: lighten($navy, 15%);}
+					&.chemistry.dragging{background: lighten($gold, 15%);}
 					p{
 						text-transform: capitalize;
 						&.dayRight{
@@ -72,17 +90,18 @@ body{
 				height: 250px;
 				padding: 20px;
 				margin: -125px 0 0 -135px; 
-				border: 1px solid #ccc;
+				border: 1px solid #128;
 				background: #FFF;
-				-webkit-box-shadow: 0px 0px 10px 5px rgba(204,204,204,1);
-				-moz-box-shadow: 0px 0px 10px 5px rgba(204,204,204,1);
-				box-shadow: 0px 0px 10px 5px rgba(204,204,204,1);
+				-webkit-box-shadow: 0px 0px 20px 8px rgba(128,128,128,1);
+				-moz-box-shadow: 0px 0px 20px 8px rgba(128,128,128,1);
+				box-shadow: 0px 0px 20px 8px rgba(128,128,128,1);
 				display: none;
 				&.show{display: block;}
 				p{
 					float: left;
 					padding: 10px 0;
 					clear: left;
+					font-weight: bold;
 				}
 				input{
 					float: right;

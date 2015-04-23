@@ -43,13 +43,14 @@ body .fullWrapper {
         border: 2px solid red;
         border-radius: 6px;
         margin: 10px auto;
-        padding: 10px; }
+        padding: 10px;
+        background: #FFF; }
         body .fullWrapper .week .dayWrapper [ng-drag].english {
           border-color: red; }
         body .fullWrapper .week .dayWrapper [ng-drag].maths {
           border-color: green; }
         body .fullWrapper .week .dayWrapper [ng-drag].geography {
-          border-color: pink; }
+          border-color: Aqua; }
         body .fullWrapper .week .dayWrapper [ng-drag].spanish {
           border-color: yellow; }
         body .fullWrapper .week .dayWrapper [ng-drag].french {
@@ -60,6 +61,22 @@ body .fullWrapper {
           border-color: navy; }
         body .fullWrapper .week .dayWrapper [ng-drag].chemistry {
           border-color: gold; }
+        body .fullWrapper .week .dayWrapper [ng-drag].english.dragging {
+          background: #ff4d4d; }
+        body .fullWrapper .week .dayWrapper [ng-drag].maths.dragging {
+          background: #00cc00; }
+        body .fullWrapper .week .dayWrapper [ng-drag].geography.dragging {
+          background: #4dffff; }
+        body .fullWrapper .week .dayWrapper [ng-drag].spanish.dragging {
+          background: #ffff4d; }
+        body .fullWrapper .week .dayWrapper [ng-drag].french.dragging {
+          background: #ffc04d; }
+        body .fullWrapper .week .dayWrapper [ng-drag].history.dragging {
+          background: #ffa493; }
+        body .fullWrapper .week .dayWrapper [ng-drag].physics.dragging {
+          background: #0000cc; }
+        body .fullWrapper .week .dayWrapper [ng-drag].chemistry.dragging {
+          background: #ffe34d; }
         body .fullWrapper .week .dayWrapper [ng-drag] p {
           text-transform: capitalize; }
           body .fullWrapper .week .dayWrapper [ng-drag] p.dayRight {
@@ -73,18 +90,19 @@ body .fullWrapper {
       height: 250px;
       padding: 20px;
       margin: -125px 0 0 -135px;
-      border: 1px solid #ccc;
+      border: 1px solid #128;
       background: #FFF;
-      -webkit-box-shadow: 0px 0px 10px 5px #cccccc;
-      -moz-box-shadow: 0px 0px 10px 5px #cccccc;
-      box-shadow: 0px 0px 10px 5px #cccccc;
+      -webkit-box-shadow: 0px 0px 20px 8px gray;
+      -moz-box-shadow: 0px 0px 20px 8px gray;
+      box-shadow: 0px 0px 20px 8px gray;
       display: none; }
       body .fullWrapper .week .overlay.show {
         display: block; }
       body .fullWrapper .week .overlay p {
         float: left;
         padding: 10px 0;
-        clear: left; }
+        clear: left;
+        font-weight: bold; }
       body .fullWrapper .week .overlay input {
         float: right;
         border: none;
