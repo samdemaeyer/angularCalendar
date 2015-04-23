@@ -2,7 +2,7 @@ angular.module('calendarSam', ['ngDraggable'])
 	.controller('dayCtrl',['$scope', function($scope){ 
 		$scope.days = ["monday","tuesday","wednesday","thursday","friday"];
 	}])
-    .controller('CalendarCtrl', ['$scope', '$http', function($scope, $http) {
+    .controller('CalendarCtrl', ['$scope', '$http', '$element', function($scope, $http, $element) {
         $http.get('js/tasks.json').then(function(res) {
             $scope.events = res.data;
             $scope.draggableObjects = $scope.events.items;
@@ -76,8 +76,14 @@ angular.module('calendarSam', ['ngDraggable'])
 	                $scope.droppedObjects5.splice(index, 1);
 	            }
 	        }
-	        $scope.getData=function(data){
+	        $scope.getData=function(data, element){
 	        	$scope.obj = data;
+	        	var showOverlay = angular.element(document.querySelector('.overlay'));
+	        	showOverlay.addClass('show');	        	
+	        }
+	        $scope.hideOverlay=function(element){
+	        	var hideOverlay = angular.element(document.querySelector('.overlay'));
+	        	hideOverlay.removeClass('show');
 	        }
         })
     }]);

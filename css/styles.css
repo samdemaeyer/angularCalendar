@@ -1,103 +1,113 @@
-.days {
-    float: left;
-    border: 1px solid;
-    margin: 5px;
-    width: 250px;
-    height: auto;
-    min-height: 400px;
-}
-.fl-right{
-	float: right;
-}
-.fl-left{
-	float: left;
-}
-/*.item {
-    width: 150px;
-    height: auto;
-    border: 1px solid;
-    padding: 5px;
-    margin: 10px;
-}*/
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic);
 * {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-[ng-drag] {
-    -moz-user-select: -moz-none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-[ng-drag] {
-    width: 200px;
-    height: auto;
-    background: rgba(255, 0, 0, 0.5);
-    color: white;
-    text-align: center;
-    display: block;
-    cursor: move;
-}
-[ng-drag].english {
-    background: rgba(255, 0, 0, 0.5);
-}
-[ng-drag].maths {
-    background: rgba(0, 255, 0, 0.5);
-}
-[ng-drag].geography {
-    background: rgba(0, 0, 255, 0.5);
-}
-[ng-drag].spanish{
-	background: aliceblue;
-}
-[ng-drag].french{
-	background: green;
-}
-[ng-drag].history{
-	background: yellow;
-}
-[ng-drag].physics{
-	background: seashell;
-}
-[ng-drag].chemistry{
-	background: tomato;
-}
-[ng-drag].drag-over {
-    border: solid 1px red;
-}
-[ng-drag].dragging {
-    opacity: 0.5;
-}
-[ng-drop] {
-    background: rgba(0, 0, 0, 0.25);
-    text-align: center;
-    display: block;
-    position: relative;
-    padding: 20px;
-    width: 250px;
-    height: 100vh;
-    float: left;
-}
-[ng-drop].drag-enter {
-    border: solid 5px red;
-}
-[ng-drop] span.title {
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 200px;
-    height: 20px;
-    margin-left: -100px;
-    margin-top: -10px;
-}
-[ng-drop] div {
-    position: relative;
-    z-index: 2;
-}
-.draglist {
-    display: inline-block;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif; }
+
+p {
+  padding: 0;
+  margin: 0; }
+
+body .fullWrapper {
+  position: relative; }
+  body .fullWrapper .week {
+    width: 1170px;
+    border: 1px solid #ccc;
     margin: 0 auto;
-}
+    padding: 20px; }
+    body .fullWrapper .week .dayWrapper {
+      width: 19%;
+      float: left;
+      border: 1px solid #ccc;
+      margin-right: 1%;
+      min-height: 700px; }
+      body .fullWrapper .week .dayWrapper .day {
+        height: 50px;
+        border-bottom: 1px solid #ccc; }
+        body .fullWrapper .week .dayWrapper .day p {
+          text-align: center;
+          line-height: 50px;
+          font-weight: bold;
+          text-transform: capitalize; }
+      body .fullWrapper .week .dayWrapper [ng-drag] {
+        -moz-user-select: -moz-none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        width: 200px;
+        height: auto;
+        display: block;
+        cursor: move;
+        border: 2px solid red;
+        border-radius: 6px;
+        margin: 10px auto;
+        padding: 10px; }
+        body .fullWrapper .week .dayWrapper [ng-drag].english {
+          border-color: red; }
+        body .fullWrapper .week .dayWrapper [ng-drag].maths {
+          border-color: green; }
+        body .fullWrapper .week .dayWrapper [ng-drag].geography {
+          border-color: pink; }
+        body .fullWrapper .week .dayWrapper [ng-drag].spanish {
+          border-color: yellow; }
+        body .fullWrapper .week .dayWrapper [ng-drag].french {
+          border-color: orange; }
+        body .fullWrapper .week .dayWrapper [ng-drag].history {
+          border-color: tomato; }
+        body .fullWrapper .week .dayWrapper [ng-drag].physics {
+          border-color: navy; }
+        body .fullWrapper .week .dayWrapper [ng-drag].chemistry {
+          border-color: gold; }
+        body .fullWrapper .week .dayWrapper [ng-drag] p {
+          text-transform: capitalize; }
+          body .fullWrapper .week .dayWrapper [ng-drag] p.dayRight {
+            text-align: right;
+            font-size: 12px; }
+    body .fullWrapper .week .overlay {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 270px;
+      height: 250px;
+      padding: 20px;
+      margin: -125px 0 0 -135px;
+      border: 1px solid #ccc;
+      background: #FFF;
+      -webkit-box-shadow: 0px 0px 10px 5px #cccccc;
+      -moz-box-shadow: 0px 0px 10px 5px #cccccc;
+      box-shadow: 0px 0px 10px 5px #cccccc;
+      display: none; }
+      body .fullWrapper .week .overlay.show {
+        display: block; }
+      body .fullWrapper .week .overlay p {
+        float: left;
+        padding: 10px 0;
+        clear: left; }
+      body .fullWrapper .week .overlay input {
+        float: right;
+        border: none;
+        padding: 5px;
+        margin: 5px 0;
+        width: 165px; }
+        body .fullWrapper .week .overlay input:focus {
+          background: #EFEFEF;
+          outline: none; }
+      body .fullWrapper .week .overlay .btnSave {
+        float: right;
+        margin-top: 20px;
+        border: none;
+        border-bottom: 2px solid #008BFF;
+        background: #D7EDFF;
+        padding: 5px 10px;
+        transition: all 0.6s; }
+        body .fullWrapper .week .overlay .btnSave:hover {
+          background: #68D1FF;
+          border-bottom: 2px solid #0034FF;
+          transition: all 0.6s; }
+
+.clear {
+  clear: both; }
+
+/*# sourceMappingURL=styles.css.map */

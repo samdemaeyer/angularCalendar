@@ -1,0 +1,116 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic);
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+p{
+	padding: 0;
+	margin: 0;
+}
+body{
+	.fullWrapper{
+		position: relative;
+		.week{
+			width: 1170px;
+			border: 1px solid #ccc;
+			margin: 0 auto; 
+			padding: 20px;
+			.dayWrapper{
+				width: 19%;
+				float: left;
+				border: 1px solid #ccc;
+				margin-right: 1%;
+				min-height: 700px;
+				.day{
+					height: 50px;
+					border-bottom: 1px solid #ccc;
+					p{
+						text-align: center;
+						line-height: 50px;
+						font-weight: bold;
+						text-transform: capitalize;
+					}
+				}
+				[ng-drag] {
+				    -moz-user-select: -moz-none;
+				    -khtml-user-select: none;
+				    -webkit-user-select: none;
+				    -ms-user-select: none;
+				    user-select: none;
+				    width: 200px;
+				    height: auto;
+				    display: block;
+				    cursor: move;
+				    border: 2px solid red;
+				    border-radius: 6px;
+				    margin: 10px auto;
+				    padding: 10px;
+				    &.english{border-color: red}
+					&.maths{border-color: green}
+					&.geography{border-color: pink}
+					&.spanish{border-color: yellow}
+					&.french{border-color: orange}
+					&.history{border-color: tomato}
+					&.physics{border-color: navy}
+					&.chemistry{border-color: gold}
+					p{
+						text-transform: capitalize;
+						&.dayRight{
+							text-align: right;
+							font-size: 12px;
+						}
+					}
+				}
+			}
+			.overlay{
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				width: 270px;
+				height: 250px;
+				padding: 20px;
+				margin: -125px 0 0 -135px; 
+				border: 1px solid #ccc;
+				background: #FFF;
+				-webkit-box-shadow: 0px 0px 10px 5px rgba(204,204,204,1);
+				-moz-box-shadow: 0px 0px 10px 5px rgba(204,204,204,1);
+				box-shadow: 0px 0px 10px 5px rgba(204,204,204,1);
+				display: none;
+				&.show{display: block;}
+				p{
+					float: left;
+					padding: 10px 0;
+					clear: left;
+				}
+				input{
+					float: right;
+					border: none;
+					padding: 5px;
+					margin: 5px 0;
+					width: 165px;
+					&:focus{
+						background: #EFEFEF;
+						outline: none;
+					}
+				}
+				.btnSave{
+					float: right;
+					margin-top: 20px;
+					border: none;
+					border-bottom: 2px solid #008BFF;
+					background: #D7EDFF;
+					padding: 5px 10px;
+					transition: all 0.6s;
+					&:hover{
+						background: #68D1FF;
+						border-bottom: 2px solid #0034FF;
+						transition: all 0.6s;
+					}
+				}
+			}
+		}
+	}
+}
+.clear{clear: both;}

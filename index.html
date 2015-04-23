@@ -9,65 +9,66 @@
 	<script type="text/javascript" src="js/app.js"></script>
 </head>
 <body>
-	<div class="week" ng-controller="dayCtrl">	
-		<div class="fullWrapper" ng-controller="CalendarCtrl">		
-			<div class="days" ng-drop="true" ng-drop-success="onDropComplete1($data,$event)">
-				{{days[0]}}
-				<div ng-repeat="obj in droppedObjects1" ng-drag="true" ng-drag-data="obj" ng-drag-success="onDragSuccess1($data,$event)"  ng-if="obj.day=='monday'" ng-click="getData(obj)">
+	<div class="fullWrapper" ng-controller="dayCtrl">	
+		<div class="week" ng-controller="CalendarCtrl">		
+			<div class="dayWrapper" ng-drop="true" ng-drop-success="onDropComplete1($data,$event)">
+				<div class="day"><p>{{days[0]}}</p></div>
+				<div ng-repeat="obj in droppedObjects1" ng-drag="true" ng-drag-data="obj" ng-drag-success="onDragSuccess1($data,$event)"  ng-if="obj.day=='monday'" ng-click="getData(obj)" class="{{obj.subject}}">
 					<p class="title">title: {{obj.title}}</p>
 					<p class="class">class: {{obj.class}}</p>
 					<p class="teacher">teacher: {{obj.teacher}}</p>
 					<p class="subject">subject: {{obj.subject}}</p>					
-					<p class="subject">Day: {{obj.day}}</p>
+					<p class="dayRight">{{obj.day}}</p>
       			</div>
 			</div>
-			<div class="days" ng-drop="true" ng-drop-success="onDropComplete2($data,$event)">
-				{{days[1]}}
-				<div ng-repeat="obj in droppedObjects2" ng-drag="true" ng-drag-data="obj" ng-drag-success="onDragSuccess2($data,$event)"  ng-if="obj.day=='tuesday'" ng-click="getData(obj)">
+			<div class="dayWrapper" ng-drop="true" ng-drop-success="onDropComplete2($data,$event)">
+				<div class="day"><p>{{days[1]}}</p></div>
+				<div ng-repeat="obj in droppedObjects2" ng-drag="true" ng-drag-data="obj" ng-drag-success="onDragSuccess2($data,$event)"  ng-if="obj.day=='tuesday'" ng-click="getData(obj)" class="{{obj.subject}}">
 					<p class="title">title: {{obj.title}}</p>
 					<p class="class">class: {{obj.class}}</p>
 					<p class="teacher">teacher: {{obj.teacher}}</p>
 					<p class="subject">subject: {{obj.subject}}</p>					
-					<p class="subject">Day: {{obj.day}}</p>
+					<p class="dayRight">{{obj.day}}</p>
 				</div>
 			</div>
-			<div class="days" ng-drop="true" ng-drop-success="onDropComplete3($data,$event)">
-				{{days[2]}}
-				<div ng-repeat="obj in droppedObjects2" ng-drag="true" ng-drag-data="obj" ng-drag-success="onDragSuccess2($data,$event)"  ng-if="obj.day=='wednesday'" ng-click="getData(obj)">
+			<div class="dayWrapper" ng-drop="true" ng-drop-success="onDropComplete3($data,$event)">
+				<div class="day"><p>{{days[2]}}</p></div>
+				<div ng-repeat="obj in droppedObjects2" ng-drag="true" ng-drag-data="obj" ng-drag-success="onDragSuccess2($data,$event)"  ng-if="obj.day=='wednesday'" ng-click="getData(obj)" class="{{obj.subject}}">
 					<p class="title">title: {{obj.title}}</p>
 					<p class="class">class: {{obj.class}}</p>
 					<p class="teacher">teacher: {{obj.teacher}}</p>
 					<p class="subject">subject: {{obj.subject}}</p>					
-					<p class="subject">Day: {{obj.day}}</p>
+					<p class="dayRight">{{obj.day}}</p>
 				</div>
 			</div>
-			<div class="days" ng-drop="true" ng-drop-success="onDropComplete4($data,$event)">
-				{{days[3]}}
-				<div ng-repeat="obj in droppedObjects2" ng-drag="true" ng-drag-data="obj" ng-drag-success="onDragSuccess2($data,$event)"  ng-if="obj.day=='thursday'" ng-click="getData(obj)">
+			<div class="dayWrapper" ng-drop="true" ng-drop-success="onDropComplete4($data,$event)">
+				<div class="day"><p>{{days[3]}}</p></div>
+				<div ng-repeat="obj in droppedObjects2" ng-drag="true" ng-drag-data="obj" ng-drag-success="onDragSuccess2($data,$event)"  ng-if="obj.day=='thursday'" ng-click="getData(obj)" class="{{obj.subject}}">
 					<p class="title">title: {{obj.title}}</p>
 					<p class="class">class: {{obj.class}}</p>
 					<p class="teacher">teacher: {{obj.teacher}}</p>
 					<p class="subject">subject: {{obj.subject}}</p>					
-					<p class="subject">Day: {{obj.day}}</p>
+					<p class="dayRight">{{obj.day}}</p>
 				</div>
 			</div>
-			<div class="days" ng-drop="true" ng-drop-success="onDropComplete5($data,$event)">
-				{{days[4]}}
-				<div ng-repeat="obj in droppedObjects2" ng-drag="true" ng-drag-data="obj" ng-drag-success="onDragSuccess2($data,$event)"  ng-if="obj.day=='friday'" ng-click="getData(obj)">
+			<div class="dayWrapper" ng-drop="true" ng-drop-success="onDropComplete5($data,$event)">
+				<div class="day"><p>{{days[4]}}</p></div>
+				<div ng-repeat="obj in droppedObjects2" ng-drag="true" ng-drag-data="obj" ng-drag-success="onDragSuccess2($data,$event)"  ng-if="obj.day=='friday'" ng-click="getData(obj)" class="{{obj.subject}}" showOverlay="">
 					<p class="title">title: {{obj.title}}</p>
 					<p class="class">class: {{obj.class}}</p>
 					<p class="teacher">teacher: {{obj.teacher}}</p>
 					<p class="subject">subject: {{obj.subject}}</p>					
-					<p class="subject">Day: {{obj.day}}</p>
+					<p class="dayRight">{{obj.day}}</p>
 				</div>
 			</div>
-			<div>
-				<p class="title">title: <input type="text" ng-model="obj.title"></p>
-				<p class="class">class: <input type="text" ng-model="obj.class"></p>
-				<p class="teacher">teacher: <input type="text" ng-model="obj.teacher"></p>
-				<p class="subject">subject: <input type="text" ng-model="obj.subject"></p>					
-				<p class="subject">Day: <input type="text" ng-model="obj.day"></p>
+			<div class="overlay">
+				<p class="title">title: </p><input type="text" ng-model="obj.title">
+				<p class="class">class: </p><input type="text" ng-model="obj.class">
+				<p class="teacher">teacher: </p><input type="text" ng-model="obj.teacher">
+				<p class="subject">subject: </p><input type="text" ng-model="obj.subject">
+				<button class="btnSave" ng-click="hideOverlay()">save</button>
 			</div>
+			<div class="clear"></div>
 		</div>
 	</div>
 </body>
